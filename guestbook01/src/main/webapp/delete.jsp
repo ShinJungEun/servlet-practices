@@ -10,7 +10,7 @@
 	 new GuestbookDao().delete(no, password);
 	
 
-		response.sendRedirect("/guestbook02");
+	response.sendRedirect("/guestbook01");
 
 %>
 <!DOCTYPE html>

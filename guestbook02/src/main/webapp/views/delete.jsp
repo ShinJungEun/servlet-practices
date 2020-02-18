@@ -3,8 +3,17 @@
 	pageEncoding="UTF-8"%>
 
 <%
+	request.setCharacterEncoding("UTF-8");
+	Long no = Long.parseLong(request.getParameter("no"));
+	String password = request.getParameter("password");
+	
+	 new GuestbookDao().delete(no, password);
+	
+
+	response.sendRedirect("/guestbook02");
 
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
