@@ -5,7 +5,7 @@
     <artifactId>servlet-practices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>emailllist01</artifactId>
+  <artifactId>emaillist01</artifactId>
   <packaging>war</packaging>
   
   	<properties>
@@ -45,7 +45,7 @@
 	</dependencies>
 
 	<build>
-
+		<finalName>emaillist</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<resources>
 			<resource>
