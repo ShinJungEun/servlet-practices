@@ -8,7 +8,7 @@ import com.douzone.guestbook.vo.GuestbookVo;
 public class GuestbookDaoTest {
 
 	public static void main(String[] args) {
-		insertTest();
+//		insertTest();
 
 		selectTest();
 	}
