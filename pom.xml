@@ -17,7 +17,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>jstlel</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
@@ -37,7 +36,6 @@
 		<module>guestbook01</module>
 		<module>jstlel</module>
 		<module>emaillist01</module>
-		<module>emailllist01</module>
 		<module>emaillist02</module>
 		<module>guestbook02</module>
 	</modules>
