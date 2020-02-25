@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.douzone.guestbook.dao.GuestbookDao;
+import com.douzone.guestbook.repository.GuestbookRepository;
 import com.douzone.guestbook.vo.GuestbookVo;
 
 
@@ -32,7 +32,7 @@ public class GuestbookServlet extends HttpServlet {
 			vo.setContents(contents);
 			vo.setPassword(password);
 
-			new GuestbookDao().insert(vo);
+			new GuestbookRepository().insert(vo);
 
 			response.sendRedirect(request.getContextPath() + "/gb");
 
@@ -43,12 +43,12 @@ public class GuestbookServlet extends HttpServlet {
 			Long no = Long.parseLong(request.getParameter("no"));
 			String password = request.getParameter("password");
 
-			new GuestbookDao().delete(no, password);
+			new GuestbookRepository().delete(no, password);
 
 			response.sendRedirect(request.getContextPath() + "/gb");
 		} else {
 			// list(default) 처리
-			List<GuestbookVo> list = new GuestbookDao().findAll();	
+			List<GuestbookVo> list = new GuestbookRepository().findAll();	
 
 			request.setAttribute("list", list);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index.jsp");

@@ -1,4 +1,4 @@
-package com.douzone.guestbook.dao;
+package com.douzone.guestbook.repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ import java.util.List;
 
 import com.douzone.guestbook.vo.GuestbookVo;
 
-public class GuestbookDao {
+public class GuestbookRepository {
 
 	public List<GuestbookVo> findAll() {
 		List<GuestbookVo> result = new ArrayList<>();
@@ -155,7 +155,7 @@ public class GuestbookDao {
 
 	public String findPassword(Long no) {
 		String password = null;
-		List<GuestbookVo> list = new GuestbookDao().findAll();
+		List<GuestbookVo> list = new GuestbookRepository().findAll();
 
 		for(GuestbookVo vo : list) {
 			if(vo.getNo() == no) {
